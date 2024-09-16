@@ -1,0 +1,88 @@
+// Definimos variables para los colores y otros valores comunes
+$primary-border-color: #FF4C24;
+$shadow-color: #00000015;
+$description-color: #676767;
+$price-color: #FF4C24;
+
+.item-producto {
+  width: 280px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px $shadow-color;
+  transition: 0.3s;
+  animation: fadeIn 1s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &-img-contenedor {
+    position: relative;
+
+    .add {
+      width: 35px;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      cursor: pointer;
+      border-radius: 50%;
+
+      &:hover {
+        border: 2px solid $primary-border-color;
+      }
+    }
+  }
+}
+
+.imagen-producto {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.producto-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: white;
+
+  img {
+    width: 30px;
+  }
+}
+
+.producto-info {
+  padding: 20px;
+}
+
+.producto-item-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  img {
+    width: 70px;
+  }
+}
+
+.producto-descripcion {
+  color: $description-color;
+  font-size: 12px;
+}
+
+.producto-item-precio {
+  color: $price-color;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px 0;
+}

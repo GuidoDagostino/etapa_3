@@ -1,0 +1,118 @@
+// Definimos variables para los colores y tamaños
+$primary-color: #49557E;
+$button-border-color: #FF4C24;
+$button-hover-bg: #fff4f2;
+$dot-color: #FF4C24;
+
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 150px;
+  }
+
+  &-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: $primary-color;
+    font-size: 18px;
+
+    .active {
+      padding-bottom: 2px;
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    button {
+      background: transparent;
+      font-size: 16px;
+      color: $primary-color;
+      border: 1px solid $button-border-color;
+      padding: 10px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: $button-hover-bg;
+      }
+    }
+  }
+
+  &-search-icon {
+    position: relative;
+
+    .dot {
+      position: absolute;
+      min-width: 10px;
+      min-height: 10px;
+      background-color: $dot-color;
+      border-radius: 5px;
+      top: -8px;
+      right: -8px;
+    }
+  }
+
+  // Media queries
+  @media (max-width: 1050px) {
+    .logo {
+      width: 140px;
+    }
+
+    &-menu {
+      gap: 20px;
+      font-size: 17px;
+    }
+
+    &-right {
+      gap: 30px;
+
+      img {
+        width: 22px;
+      }
+
+      button {
+        padding: 8px 25px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .logo {
+      width: 120px;
+    }
+
+    &-menu {
+      gap: 15px;
+      font-size: 16px;
+    }
+
+    &-right {
+      gap: 20px;
+
+      img {
+        width: 20px;
+      }
+
+      button {
+        font-size: 15px;
+        padding: 7px 20px;
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    &-menu {
+      display: none;
+    }
+  }
+}

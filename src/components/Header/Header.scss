@@ -1,0 +1,71 @@
+// Definimos variables para colores
+$header-text-color: rgb(0, 0, 0);
+$header-button-color: #747474;
+$header-button-bg: white;
+
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  background: url('/header_img.png') no-repeat;
+  background-size: contain;
+  position: relative;
+
+  &-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+
+    // Estilos para el título (h2)
+    h2 {
+      font-weight: 500;
+      color: $header-text-color;
+      font-size: max(4.5vw, 22px);
+    }
+
+    // Estilos para el párrafo (p)
+    p {
+      color: $header-text-color;
+      font-size: 1.5vw;
+    }
+
+    // Estilos para el botón
+    button {
+      border: none;
+      color: $header-button-color;
+      font-weight: 500;
+      padding: 1vw 2.3vw;
+      background: $header-button-bg;
+      font-size: max(1vw, 13px);
+      border-radius: 50px;
+    }
+  }
+
+  // Media queries
+  @media (max-width: 1050px) {
+    height: 38vw;
+
+    &-contents {
+      max-width: 45%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    &-contents {
+      max-width: 55%;
+
+      p {
+        display: none;
+      }
+
+      button {
+        padding: 2vw 4vw;
+      }
+    }
+  }
+}

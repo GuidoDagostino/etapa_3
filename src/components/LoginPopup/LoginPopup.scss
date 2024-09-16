@@ -1,0 +1,84 @@
+// Definimos variables para los colores
+$login-popup-bg-color: #00000090;
+$popup-container-bg-color: white;
+$popup-text-color: #808080;
+$popup-border-color: #C9C9C9;
+$popup-button-bg-color: #FF4C24;
+$popup-link-color: #FF4C24;
+
+.login-popup {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: $login-popup-bg-color;
+  display: grid;
+
+  &-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: $popup-text-color;
+    background-color: $popup-container-bg-color;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+
+    button {
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      color: white;
+      background-color: $popup-button-bg-color;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+
+    img {
+      width: 16px;
+      cursor: pointer;
+    }
+  }
+
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      outline: none;
+      border: 1px solid $popup-border-color;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  }
+
+  &-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+
+    input {
+      margin-top: 5px;
+    }
+  }
+
+  p {
+    span {
+      color: $popup-link-color;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}

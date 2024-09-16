@@ -1,0 +1,73 @@
+// Definimos variables para los colores
+$primary-text-color: #262626;
+$secondary-text-color: #808080;
+$list-item-text-color: #747474;
+$active-border-color: tomato;
+$divider-color: #E2E2E2;
+
+.menusec {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h1 {
+    color: $primary-text-color;
+    font-weight: 500;
+  }
+
+  &-texto {
+    max-width: 60%;
+    color: $secondary-text-color;
+  }
+
+  &-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-item {
+      img {
+        width: 7.5vw;
+        min-width: 80px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: 0.2s;
+      }
+
+      .active {
+        border: 4px solid $active-border-color;
+        padding: 2px;
+      }
+
+      p {
+        margin-top: 10px;
+        color: $list-item-text-color;
+        font-size: max(1.4vw, 16px);
+        cursor: pointer;
+      }
+    }
+  }
+
+  hr {
+    margin: 10px 0;
+    height: 2px;
+    background-color: $divider-color;
+    border: none;
+  }
+
+  // Media queries
+  @media (max-width: 1050px) {
+    &-text {
+      max-width: 100%;
+      font-size: 14px;
+    }
+  }
+}
